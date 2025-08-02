@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Grandma's Bakery - homemade cakes, cookies, and pastries made with love and tradition. Taste the warmth of home in every bite."
+    />
+    <meta
+      name="keywords"
+      content="Grandma's Bakery, homemade cakes, fresh pastries, cookies, traditional baking, local bakery, artisan desserts, baked goods, comfort food, sweet treats"
+    />
+    <meta name="author" content="Grandma's Bakery" />
+    <meta http-equiv="Content-Language" content="en" />
+
+    <link rel="icon" href="/photos/header-logo.svg" type="image/svg+xml" />
+    <!-- Css styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="welcome-section.css" />
+    <link rel="stylesheet" href="aboutus-section.css" />
+    <link rel="stylesheet" href="store-section.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Grandma's Bakery</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="nav">
+        <div class="nav-brand-logo">
+          <img src="photos/header-logo.svg" alt="Brand Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#store">Store</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="nav-contacts">
+            <img src="photos/phone-flip-solid-full.svg" alt="Phone Icon" />
+            <p>+ 123 456 789</p>
+          </div>
+          <button class="nav-cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              class="cart-icon"
+            >
+              <path
+                d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"
+              />
+            </svg>
+            <div class="cart-info">
+              <p>
+                <span class="cart-count">0 </span>Items -
+                <span class="cart-total">$00.00</span>
+              </p>
+            </div>
+          </button>
+          <div class="nav-menu-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              fill="currentColor"
+              width="64"
+              height="64"
+              class="menu-icon"
+            >
+              <path
+                class="menu-icon-path"
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- This is the submenu that toggles open/close -->
+        <ul class="mobile-submenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#store">Store</a></li>
+        </ul>
+      </nav>
+      <div class="mini-cart" id="mini-cart">
+        <ul id="cart-items"></ul>
+        <p id="empty-message">Cart is empty</p>
+        <div class="mini-cart-total-bar">
+          <p>Total: <span class="mini-cart-total-amount">$0.00</span></p>
+          <div class="mini-cart-buttons">
+            <button class="btn clear-cart-btn">Clear Cart</button>
+            <button class="btn checkout-btn">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section" id="home">
+      <div class="welcome-section-wrapper">
+        <h1 class="section-title">
+          Welcome To <span class="highlight"> Grandma's</span>
+        </h1>
+        <button
+          class="btn"
+          aria-label="Explore content"
+          onclick="document.getElementById('store').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Explore
+        </button>
+      </div>
+    </section>
+    <!-- About us Section -->
+    <section class="about-us-section" id="about">
+      <div class="about-us-content">
+        <h2 class="section-title">About <span class="highlight"> Us</span></h2>
+        <p class="about-us-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+          aliquam voluptas beatae vitae expedita consectetur nesciunt quia
+          deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro
+          at dolorum! Ad!
+        </p>
+        <button
+          class="btn"
+          aria-label="Explore content"
+          onclick="document.getElementById('store').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Explore
+        </button>
+      </div>
+      <div class="about-us-img-container">
+        <img
+          src="photos/sweets-1.jpeg"
+          class="about-us-img"
+          alt="Macarone dessert"
+        />
+      </div>
+    </section>
+    <!-- Store Sectin -->
+    <section class="store-section" id="store">
+      <div class="store-search">
+        <h1 class="section-title">Our <span class="highlight"> Store</span></h1>
+        <div class="store-filter-btn">
+          <button
+            data-filter="all"
+            class="btn active"
+            aria-label="All store items"
+          >
+            all
+          </button>
+          <button
+            data-filter="cakes"
+            class="btn"
+            aria-label="Filter desserts by cakes"
+          >
+            cakes
+          </button>
+          <button
+            data-filter="cupcakes"
+            class="btn"
+            aria-label="Filter desserts by cupcakes"
+          >
+            cupcakes
+          </button>
+          <button
+            data-filter="sweets"
+            class="btn"
+            aria-label="Filter desserts by sweets"
+          >
+            sweets
+          </button>
+          <button
+            data-filter="doughnuts"
+            class="btn"
+            aria-label="Filter desserts by doughnuts"
+          >
+            doughnuts
+          </button>
+        </div>
+        <div class="search-box">
+          <div class="search-icon">
+            <img src="photos/magnifying-glass.png" alt="Search icon" />
+          </div>
+          <label for="search-input" class="visually-hidden"
+            >Search store items</label
+          >
+          <input
+            id="search-input"
+            class="search-input"
+            type="text"
+            placeholder="item..."
+          />
+        </div>
+      </div>
+      <!-- Cards -->
+      <div class="sweet-card-container" data-category="sweets">
+        <div class="sweet-card">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/sweets-1.jpeg"
+              alt="Macarone dessert"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Macarone Cupcake</p>
+            <p class="sweet-card-price">5</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cupcakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-2.jpeg"
+              alt="Cupcakes with colorful frosting"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Cupcakes</p>
+            <p class="sweet-card-price">13</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cakes">
+          <div class="sweet-card-image-wrapper">
+            <img class="sweet-card-image" src="photos/img-3.jpeg" alt="Chocolate
+            cake" /
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Chocolate cake</p>
+            <p class="sweet-card-price">12</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="doughnuts">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-4.jpeg"
+              alt="Purple doughnut"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Purple doughnut</p>
+            <p class="sweet-card-price">5</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="sweets">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-5.jpeg"
+              alt="Assortment of candy sweets"
+            />
+
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Candy sweets</p>
+            <p class="sweet-card-price">18</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cupcakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-6.jpeg"
+              alt="Chocolate cupcake"
+            />
+
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Chocolate cupcake</p>
+            <p class="sweet-card-price">7</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-7.jpeg"
+              alt="Cake with minimalist white frosting "
+            />
+
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">White cake</p>
+            <p class="sweet-card-price">22</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="doughnuts">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-8.jpeg"
+              alt="Doughnuts assortment"
+            />
+
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Doughnuts assortment</p>
+            <p class="sweet-card-price">6</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="sweets">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-9.jpeg"
+              alt="Dark chocolate"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Dark chocolate</p>
+            <p class="sweet-card-price">3</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cupcakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-10.jpeg"
+              alt="Cupcakes with blue frosting"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Cupcakes with blue frosting</p>
+            <p class="sweet-card-price">10</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-11.jpeg"
+              alt="Pink birthday cake"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Pink birthday cake</p>
+            <p class="sweet-card-price">25</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="doughnuts">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-12.jpeg"
+              alt="Bear doughnut"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Bear doughnut</p>
+            <p class="sweet-card-price">5</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cupcakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-03.jpg"
+              alt="Total black cupcakes"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Total black cupcakes</p>
+            <p class="sweet-card-price">10</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="sweets">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-02.webp"
+              alt="Assortment of candy sweets"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Assortment of candy sweets</p>
+            <p class="sweet-card-price">14</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="sweets">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-15.webp"
+              alt="Assortment of candy sweets"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Assortment of candy sweets</p>
+            <p class="sweet-card-price">20</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="doughnuts">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-16.jpg"
+              alt="Pink doughnuts"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Pink doughnuts</p>
+            <p class="sweet-card-price">7</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="sweets">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-17.jpg"
+              alt="Dubai chocolate"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Dubai chocolate</p>
+            <p class="sweet-card-price">30</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cupcakes">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-18.jpg"
+              alt="Cupcakes  with strawberries"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Cupcakes with strawberries</p>
+            <p class="sweet-card-price">12</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="doughnuts">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-19.jpeg"
+              alt="Assortment of doughnuts"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Assortment of doughnuts</p>
+            <p class="sweet-card-price">5</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="doughnuts">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-05.webp"
+              alt="Pink doughnuts"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Pink doughnuts</p>
+            <p class="sweet-card-price">10</p>
+          </div>
+        </div>
+        <div class="sweet-card" data-category="cake">
+          <div class="sweet-card-image-wrapper">
+            <img
+              class="sweet-card-image"
+              src="photos/img-21.jpg"
+              alt="Strawberry cake"
+            />
+            <button class="sweet-card-btn">
+              <img
+                src="photos/cart-shopping-solid-full.svg"
+                alt="Add to cart"
+              />
+            </button>
+          </div>
+          <div class="sweet-card-info">
+            <p class="sweet-card-title">Strawberry cake</p>
+            <p class="sweet-card-price">25</p>
+          </div>
+        </div>
+        <p
+          id="no-results-message"
+          style="
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+          "
+        >
+          Sorry, no results found.
+        </p>
+      </div>
+    </section>
+    <div id="cart-notification" class="cart-notification">
+      Item added to cart
+    </div>
+    <script src="store.js"></script>
+  </body>
+</html>
