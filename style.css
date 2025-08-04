@@ -391,13 +391,27 @@ nav {
 }
 
 @keyframes spinIn {
-  0% { opacity: 0; transform: rotateX(-90deg); }
-  100% { opacity: 1; transform: rotateX(0); }
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }
 
 @keyframes spinOut {
-  0% { opacity: 1; transform: rotateX(0); }
-  100% { opacity: 0; transform: rotateX(90deg); }
+  0% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
 }
 
 
