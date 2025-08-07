@@ -1,7 +1,33 @@
+:root {
+  /* Font-family */
+
+  --font-family: "Kaushan Script", cursive;
+
+  /* Main colors */
+
+  --color-pink: #ef7998;
+  --color-white: #fff;
+  --color-yellow-trans: rgba(249, 228, 148, 0.5);
+  --color-yellow: rgb(249, 228, 148);
+
+  /* Font sizes */
+
+  --font-size-m: 1rem;
+
+  /* Spacing scale */
+
+  --space-x: 0.3125rem;
+  --space-xs: 0.625rem;
+  --space-mm: .75rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 2.5rem;
+}
 .store-section {
   background-color: rgb(238, 238, 238);
   margin-top: 5.625rem;
   padding-top: 3rem;
+  padding-bottom: 9.375rem;
 }
 
 .store-search .section-title {
@@ -16,17 +42,17 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 1.25rem;
+  padding: 0 var(--space-lg);
 }
 
 .store-filter-btn .btn {
   width: auto;
   height: 2.375rem;
-  padding: .375rem .75rem;
+  padding:  var(--space-x) var(--space-mm);
   font-size: 1rem;
   border: .0625rem solid black;
   margin-bottom: .9375rem;
-  margin-right: 2.5rem;
+  margin-right: var(--space-xxl);
 
 }
 
@@ -68,7 +94,7 @@
 .search-input {
   border: none;
   outline: none;
-  padding: .75rem;
+  padding: var(--space-mm);
   font-style: italic;
   color: #6c757d;
   font-size: 1rem;
@@ -87,11 +113,11 @@ input[type="text"] {
 .sweet-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(21.875rem, 1fr));
-  gap: 1.25rem;
+  gap: var(--space-lg);
   height: auto;
   max-width: 90rem;
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: var(--space-xxl);
   justify-items: center;
 }
 
@@ -104,14 +130,13 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease;
-  margin: 2.5rem 1.25rem 2.5rem 1.25rem;
+  margin: var(--space-xxl) var(--space-lg);
   max-width: 26.25rem;
 }
 
 .sweet-card-image-wrapper {
   position: relative;
   width: 100%;
-
   overflow: hidden;
 }
 
@@ -133,7 +158,7 @@ input[type="text"] {
   background-color: #fcefa0;
   border: none;
   border-top-left-radius: .5rem;
-  padding: .625rem;
+  padding: var(--space-xs);
   width: 2.5rem;
   height: 2.5rem;
   opacity: 0;
@@ -162,7 +187,7 @@ input[type="text"] {
 }
 
 .sweet-card-info {
-  padding: 1rem;
+  padding: var(--space-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,7 +197,7 @@ input[type="text"] {
   font-family: 'Brush Script MT', cursive;
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: .3125rem;
+  margin-bottom: var(--space-x);
 }
 
 .sweet-card-price {
@@ -183,4 +208,12 @@ input[type="text"] {
 
 .sweet-card-price::before {
   content: "$";
+}
+
+#no-results-message {
+  display: none;
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-size: 1.125rem;
+  position: absolute;
 }

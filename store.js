@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   filterCards();
 });
 
+
 // ===========================
 // Search Result Message
 // ===========================

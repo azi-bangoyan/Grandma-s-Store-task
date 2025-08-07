@@ -17,7 +17,7 @@
   color: #6c757d;
   font-size: 1rem;
   max-width: 16.875rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-xl);
 }
 
 .about-us-content .btn {
@@ -64,7 +64,7 @@
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin: 5rem 2.5rem 1.25rem 5rem;
+    margin: 5rem var(--space-xxl) var(--space-lg) 5rem;
   }
 
   .about-us-img {
